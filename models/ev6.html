@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia EV6 | DriveSphere</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/model.css">
+
+    <!-- Custom CSS for dark theme & clean image container -->
+    <style>
+        body {
+            background-color: #0f1115;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #161920;
+            border-bottom: 1px solid #2a2e39;
+        }
+
+        /* Clean Image Box Container Matching Sonet Style */
+        .model-img-container {
+            width: 100%;
+            height: 350px;
+            background-color: #ffffff !important;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #2a2e39;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            padding: 15px;
+        }
+
+        .model-img-container img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .card {
+            background-color: #181b22 !important;
+            border: 1px solid #2a2e39 !important;
+            color: #ffffff !important;
+            border-radius: 12px !important;
+        }
+
+        .list-group-item {
+            background-color: #181b22 !important;
+            color: #e0e0e0 !important;
+            border-color: #2a2e39 !important;
+        }
+
+        .green { color: #00e676; }
+        .gold { color: #ffc107; }
+
+        .price-box {
+            background-color: #1f232d;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #00e676;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            background-color: #222632 !important;
+            border: 1px solid #343a46 !important;
+            color: #ffffff !important;
+        }
+
+        .form-control:focus {
+            background-color: #282d3b !important;
+            color: #ffffff !important;
+            box-shadow: none;
+            border-color: #00e676 !important;
+        }
+
+        footer {
+            background-color: #0b0c0e;
+            padding: 40px 0;
+            border-top: 1px solid #2a2e39;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="../index.html">🚗 DriveSphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../kia.html">Kia Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specs">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#emi">EMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="model-img-container">
+                    <img src="https://www.hdcarwallpapers.com/download/kia_ev6_gt_2023_5k-3840x2160.jpg" alt="Kia EV6">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">Kia <span class="green">EV6</span></h1>
+                <p class="lead mt-3">
+                    Flagship electric crossover boasting 800V ultra-fast charging, 708 KM certified driving range, and dual-motor AWD performance.
+                </p>
+                <div class="price-box">
+                    <p class="mb-1 text-muted">Starting Price</p>
+                    <h2 class="text-warning mb-0">₹60.95 Lakh*</h2>
+                    <small class="text-secondary">*Ex-Showroom Price</small>
+                </div>
+                <div class="mt-4">
+                    <a href="#specs" class="btn btn-warning me-3 fw-bold">View Specifications</a>
+                    <a href="../kia.html" class="btn btn-outline-light">Back To Kia Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INTRO CARD ================= -->
+    <section class="container py-3">
+        <div class="card p-4 text-center">
+            <h3 class="green mb-2">⚡ Futuristic Electric Performance</h3>
+            <p class="mb-0 text-secondary">0 to 100 km/h in 5.2 seconds, V2L bi-directional charging, and Meridian 14-speaker cinematic sound system.</p>
+        </div>
+    </section>
+
+    <!-- ================= VEHICLE HIGHLIGHTS ================= -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Performance Highlights</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🔋</h1>
+                    <h4>Battery</h4>
+                    <p class="text-secondary mb-0">77.4 kWh Ultra Pack</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">⚡</h1>
+                    <h4>Range</h4>
+                    <p class="text-secondary mb-0">708 KM (ARAI)</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🚀</h1>
+                    <h4>Power</h4>
+                    <p class="text-secondary mb-0">325 PS / 605 Nm</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 p-4">
+                    <h1 class="mb-3">🛡️</h1>
+                    <h4>Safety</h4>
+                    <p class="text-secondary mb-0">5 Star Euro NCAP & ADAS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TECHNICAL SPECIFICATIONS ================= -->
+    <section id="specs" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Technical Specifications</h2>
+        <div class="card p-4">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <tbody>
+                        <tr><th>Battery Capacity</th><td>77.4 kWh Lithium-ion Pack</td></tr>
+                        <tr><th>Motor Setup</th><td>Dual Motor AWD / Single Motor RWD</td></tr>
+                        <tr><th>Maximum Power</th><td>325 PS (AWD) / 229 PS (RWD)</td></tr>
+                        <tr><th>Maximum Torque</th><td>605 Nm (AWD) / 350 Nm (RWD)</td></tr>
+                        <tr><th>0 to 100 km/h</th><td>5.2 Seconds</td></tr>
+                        <tr><th>Driving Range</th><td>708 KM (ARAI Certified)</td></tr>
+                        <tr><th>Charging Time (350 kW DC)</th><td>10% to 80% in 18 minutes</td></tr>
+                        <tr><th>Transmission</th><td>Single Speed Automatic</td></tr>
+                        <tr><th>Boot Space</th><td>520 Litres + 20 Litres Frunk (AWD)</td></tr>
+                        <tr><th>Infotainment</th><td>Dual 12.3-inch Curved Displays</td></tr>
+                        <tr><th>Safety Features</th><td>8 Airbags, Full ADAS Level 2, 360° Camera, All-Disc Brakes</td></tr>
+                        <tr><th>Battery Warranty</th><td>8 Years / 1.6 Lakh KM</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SAFETY FEATURES ================= -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Safety Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🛡️ 8 Airbags Standard</li>
+                        <li class="list-group-item">🚘 Electronic Stability Control (ESC) & ABS</li>
+                        <li class="list-group-item">📷 360-Degree Surround View Camera</li>
+                        <li class="list-group-item">⚠️ Full Level 2 ADAS Safety Suite (Forward Collision Avoidance, Blind Spot Collision)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🔒 Hill-Start Assist & Multi-Collision Brake</li>
+                        <li class="list-group-item">🚦 Smart Cruise Control with Stop & Go</li>
+                        <li class="list-group-item">🅿️ Remote Smart Parking Assist (RSPA)</li>
+                        <li class="list-group-item">⚓ ISOFIX Child Safety Seats</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= VARIANTS ================= -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Variants</h2>
+        <div class="row g-4">
+            <div class="col-lg-6 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>GT Line RWD</h4>
+                    <p class="text-secondary">Rear Wheel Drive Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 229 PS & 350 Nm Output</li>
+                        <li>✔ Dual 12.3-inch Curved Display</li>
+                        <li>✔ Meridian 14-Speaker Sound System</li>
+                        <li>✔ Full Level 2 ADAS Features</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>GT Line AWD</h4>
+                    <p class="text-secondary">All Wheel Drive Performance Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 325 PS & 605 Nm Output (Dual Motor)</li>
+                        <li>✔ 0-100 km/h in 5.2 seconds</li>
+                        <li>✔ V2L & V2V Bi-directional Charging</li>
+                        <li>✔ Augmented Reality Head-Up Display (AR HUD)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PREMIUM FEATURES ================= -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Premium Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🖥️ Dual 12.3-inch Curved Panoramic Screens</li>
+                        <li class="list-group-item">🎵 Meridian 14-Speaker Premium Audio with Active Sound Design</li>
+                        <li class="list-group-item">⚡ V2L (Vehicle-to-Load) Power Socket (Up to 3.6kW Output)</li>
+                        <li class="list-group-item">💺 Relaxation Premium Front Seats</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🚘 Wide Electric Sunroof</li>
+                        <li class="list-group-item">🌌 Augmented Reality Head-Up Display (AR HUD)</li>
+                        <li class="list-group-item">🅿️ Remote Smart Parking Assist (RSPA)</li>
+                        <li class="list-group-item">🤖 Full ADAS Level 2 Safety Suite</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COLORS ================= -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Colors</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-2 col-6"><div class="card p-3">Moonscape Matte</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Yacht Blue</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Runway Red</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Aurora Black Pearl</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Snow White Pearl</div></div>
+        </div>
+    </section>
+
+    <!-- ================= PROS & CONS ================= -->
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h3 class="text-success mb-3">✔ Pros</h3>
+                    <ul class="mb-0">
+                        <li>Blistering 0-100 Acceleration & AWD Traction</li>
+                        <li>Extremely Fast 800V Charging Capability</li>
+                        <li>Exceptional Real-World Driving Range</li>
+                        <li>V2L Feature Can Power Laptops/Appliances Directly</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h3 class="text-danger mb-3">✖ Cons</h3>
+                    <ul class="mb-0">
+                        <li>Premium CBU Pricing (>₹60 Lakh)</li>
+                        <li>350 kW Ultra-Fast Charger Network Limited in India</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EMI CALCULATOR ================= -->
+    <section id="emi" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">EMI Calculator</h2>
+        <div class="card p-4 mx-auto" style="max-width: 650px;">
+            <h4 class="text-center mb-4 green fw-bold">Calculate Your Kia EV6 EMI</h4>
+            <div class="mb-3">
+                <label class="form-label">Vehicle Price (₹)</label>
+                <input type="number" id="price" class="form-control" value="6095000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Down Payment (₹)</label>
+                <input type="number" id="down" class="form-control" value="1000000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Loan Period (Years)</label>
+                <input type="number" id="years" class="form-control" value="5">
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Interest Rate (%)</label>
+                <input type="number" id="interest" class="form-control" value="8">
+            </div>
+            <button class="btn btn-success w-100 fw-bold py-2" onclick="calculateEMI()">Calculate EMI</button>
+            <h3 class="text-center mt-4 green fw-bold" id="emiResult">₹0 / Month</h3>
+        </div>
+    </section>
+
+    <!-- ================= ACTION BUTTONS ================= -->
+    <section class="container text-center py-5">
+        <a href="#" class="btn btn-success me-3 mb-3 px-4 py-2 fw-bold">📅 Book Test Drive</a>
+        <a href="#" class="btn btn-primary me-3 mb-3 px-4 py-2 fw-bold">📄 Download Brochure</a>
+        <a href="../kia.html" class="btn btn-outline-light mb-3 px-4 py-2">⬅ Back To Kia Cars</a>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="text-center">
+        <div class="container">
+            <h3>🚗 DriveSphere</h3>
+            <p class="text-secondary">Premium Automotive Experience</p>
+            <hr class="border-secondary my-4">
+            <p class="mb-0 text-muted">© 2026 DriveSphere. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EMI Script -->
+    <script>
+        function calculateEMI() {
+            let price = Number(document.getElementById("price").value);
+            let down = Number(document.getElementById("down").value);
+            let years = Number(document.getElementById("years").value);
+            let interest = Number(document.getElementById("interest").value);
+
+            let loan = price - down;
+            let months = years * 12;
+            let monthlyRate = interest / 12 / 100;
+
+            if (loan <= 0 || isNaN(loan)) {
+                document.getElementById("emiResult").innerHTML = "Enter Valid Amount";
+                return;
+            }
+
+            let emi = (loan * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+            document.getElementById("emiResult").innerHTML = "₹" + emi.toFixed(0) + " / Month";
+        }
+    </script>
+</body>
+
+</html>

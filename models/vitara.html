@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Grand Vitara | DriveSphere</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/model.css">
+
+    <style>
+        body {
+            background-color: #0f1115;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #161920;
+            border-bottom: 1px solid #2a2e39;
+        }
+
+        img {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+            object-fit: cover;
+        }
+
+        .card {
+            background-color: #181b22 !important;
+            border: 1px solid #2a2e39 !important;
+            color: #ffffff !important;
+            border-radius: 12px !important;
+        }
+
+        .list-group-item {
+            background-color: #181b22 !important;
+            color: #e0e0e0 !important;
+            border-color: #2a2e39 !important;
+        }
+
+        .green { color: #00e676; }
+        .gold { color: #ffc107; }
+
+        .price-box {
+            background-color: #1f232d;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            background-color: #222632 !important;
+            border: 1px solid #343a46 !important;
+            color: #ffffff !important;
+        }
+
+        footer {
+            background-color: #0b0c0e;
+            padding: 40px 0;
+            border-top: 1px solid #2a2e39;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="../index.html">🚗 DriveSphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../suzuki.html">Suzuki Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specs">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#emi">EMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Maruti_Suzuki_Grand_Vitara_Front.jpg/1280px-Maruti_Suzuki_Grand_Vitara_Front.jpg" class="img-fluid rounded w-100" alt="Maruti Grand Vitara">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">Suzuki <span class="green">Grand Vitara</span></h1>
+                <p class="lead mt-3">
+                    Advanced mid-size SUV featuring Intelligent Electric Hybrid system, AllGrip AWD, and Panoramic Sunroof.
+                </p>
+                <div class="price-box">
+                    <p class="mb-1 text-muted">Starting Price (Ex-Showroom)</p>
+                    <h2 class="text-warning mb-0">₹10.99 Lakh*</h2>
+                    <small class="text-secondary">Strong Hybrid • 27.97 km/l Mileage • AllGrip AWD Option</small>
+                </div>
+                <div class="mt-4">
+                    <a href="#specs" class="btn btn-warning me-3 fw-bold">View Specifications</a>
+                    <a href="../suzuki.html" class="btn btn-outline-light">Back To Suzuki Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE HIGHLIGHTS -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Performance Highlights</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🚀</h1>
+                    <h4>Engine</h4>
+                    <p class="text-secondary mb-0">1.5L Smart / Intelligent Hybrid</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">⚡</h1>
+                    <h4>Power</h4>
+                    <p class="text-secondary mb-0">103 PS (Mild) / 116 PS (Hybrid)</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🛞</h1>
+                    <h4>Transmission</h4>
+                    <p class="text-secondary mb-0">5MT, 6AT, e-CVT</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 p-4">
+                    <h1 class="mb-3">⭐</h1>
+                    <h4>Mileage</h4>
+                    <p class="text-secondary mb-0">Up to 27.97 km/l</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SPECIFICATIONS -->
+    <section id="specs" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Technical Specifications</h2>
+        <div class="card p-4">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <tbody>
+                        <tr><th>Engine Options</th><td>1.5L Smart Hybrid / 1.5L Intelligent Electric Hybrid</td></tr>
+                        <tr><th>Power</th><td>103 PS (Mild Hybrid) / 116 PS (Strong Hybrid)</td></tr>
+                        <tr><th>Transmission</th><td>5MT, 6AT, e-CVT (Strong Hybrid)</td></tr>
+                        <tr><th>ARAI Mileage</th><td>27.97 km/l (Strong Hybrid) / 21.11 km/l (Mild Hybrid)</td></tr>
+                        <tr><th>Ground Clearance</th><td>210 mm</td></tr>
+                        <tr><th>Boot Space</th><td>373 Litres (Mild) / 265 Litres (Hybrid)</td></tr>
+                        <tr><th>Key Features</th><td>Panoramic Sunroof, Ventilated Seats, 360 Camera, HUD</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY FEATURES -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Safety Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🛡️ 6 Airbags Standard Across Variants</li>
+                        <li class="list-group-item">🛑 Electronic Stability Program (ESP) & Hill Hold</li>
+                        <li class="list-group-item">📷 360 View Camera System</li>
+                        <li class="list-group-item">🅿️ Rear Parking Sensors & Camera</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🛞 All-Wheel Disc Brakes</li>
+                        <li class="list-group-item">⚓ ISOFIX Child Seat Anchorages</li>
+                        <li class="list-group-item">🛞 Tyre Pressure Monitoring System (TPMS)</li>
+                        <li class="list-group-item">⛰️ Hill Descent Control (AllGrip)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VARIANTS -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Variants</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>Smart Hybrid Trims</h4>
+                    <p class="text-secondary">Sigma, Delta, Zeta, Alpha</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 1.5L Smart Hybrid Engine</li>
+                        <li>✔ Manual & Automatic Options</li>
+                        <li>✔ AllGrip AWD Option (Alpha)</li>
+                        <li>✔ SmartPlay Pro Touchscreen</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>Intelligent Hybrid Trims</h4>
+                    <p class="text-secondary">Zeta+, Alpha+</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ Pure EV Mode Capability</li>
+                        <li>✔ e-CVT Transmission</li>
+                        <li>✔ Panoramic Sunroof</li>
+                        <li>✔ Ventilated Front Seats</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM FEATURES -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Premium Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">☀️ Panoramic Sunroof</li>
+                        <li class="list-group-item">💺 Ventilated Front Seats</li>
+                        <li class="list-group-item">🖥️ Heads-Up Display (HUD)</li>
+                        <li class="list-group-item">📱 Wireless Smartphone Charger</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🌐 Suzuki Connect Connected Car Tech</li>
+                        <li class="list-group-item">💡 Ambient Lighting</li>
+                        <li class="list-group-item">🛞 17-inch Precision Cut Alloy Wheels</li>
+                        <li class="list-group-item">❄ Automatic Climate Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLORS -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Colors</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-2 col-6"><div class="card p-3">Nexa Blue</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Splendid Silver</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Grandeur Grey</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Opulent Red</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Chestnut Brown</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Arctic White</div></div>
+        </div>
+    </section>
+
+    <!-- EMI CALCULATOR -->
+    <section id="emi" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">EMI Calculator</h2>
+        <div class="card p-4 mx-auto" style="max-width: 650px;">
+            <h4 class="text-center mb-4 green fw-bold">Calculate Your Grand Vitara EMI</h4>
+            <div class="mb-3">
+                <label class="form-label">Vehicle Price (₹)</label>
+                <input type="number" id="price" class="form-control" value="1099000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Down Payment (₹)</label>
+                <input type="number" id="down" class="form-control" value="200000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Loan Period (Years)</label>
+                <input type="number" id="years" class="form-control" value="5">
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Interest Rate (%)</label>
+                <input type="number" id="interest" class="form-control" value="8.5">
+            </div>
+            <button class="btn btn-warning w-100 fw-bold py-2" onclick="calculateEMI()">Calculate EMI</button>
+            <h3 class="text-center mt-4 green fw-bold" id="emiResult">₹0 / Month</h3>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <h3>🚗 DriveSphere</h3>
+            <p class="text-secondary">Premium Automotive Experience</p>
+            <hr class="border-secondary my-4">
+            <p class="mb-0 text-muted">© 2026 DriveSphere. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateEMI() {
+            let price = Number(document.getElementById("price").value);
+            let down = Number(document.getElementById("down").value);
+            let years = Number(document.getElementById("years").value);
+            let interest = Number(document.getElementById("interest").value);
+
+            let loan = price - down;
+            let months = years * 12;
+            let monthlyRate = interest / 12 / 100;
+
+            if (loan <= 0 || isNaN(loan)) {
+                document.getElementById("emiResult").innerHTML = "Enter Valid Amount";
+                return;
+            }
+
+            let emi = (loan * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+            document.getElementById("emiResult").innerHTML = "₹" + emi.toFixed(0) + " / Month";
+        }
+    </script>
+</body>
+
+</html>

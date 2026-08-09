@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DriveSphere | Brand</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+
+<nav class="navbar">
+
+<div class="logo">
+🚗 DriveSphere
+</div>
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="brand.html">Brands</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+
+<section class="brand-buttons">
+
+
+<a href="brand.html?brand=BMW">
+<button>BMW</button>
+</a>
+
+
+<a href="brand.html?brand=Mercedes">
+<button>Mercedes</button>
+</a>
+
+
+<a href="brand.html?brand=Audi">
+<button>Audi</button>
+</a>
+
+
+<a href="brand.html?brand=Toyota">
+<button>Toyota</button>
+</a>
+
+
+<a href="brand.html?brand=Tata">
+<button>Tata</button>
+</a>
+
+
+<a href="brand.html?brand=Hyundai">
+<button>Hyundai</button>
+</a>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="brand-info">
+
+
+
+<div class="brand-logo">
+
+<img id="logo">
+
+</div>
+
+
+
+
+
+<div class="brand-text">
+
+
+<h1 id="name"></h1>
+
+
+<p id="desc"></p>
+
+
+
+
+<div class="details">
+
+
+<div>
+
+<h3>Founded</h3>
+<p id="year"></p>
+
+</div>
+
+
+
+<div>
+
+<h3>Founder</h3>
+<p id="founder"></p>
+
+</div>
+
+
+
+<div>
+
+<h3>CEO</h3>
+<p id="ceo"></p>
+
+</div>
+
+
+
+<div>
+
+<h3>Headquarters</h3>
+<p id="hq"></p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<h2 class="title" id="title">
+
+All Models
+
+</h2>
+
+
+
+
+
+<section class="cars" id="cars">
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+DriveSphere
+</h2>
+
+
+<p>
+Your Complete Car Information Website
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+let params =
+new URLSearchParams(location.search);
+
+
+
+let brand =
+params.get("brand") || "Tata";
+
+
+
+
+
+
+
+const brands={
+
+
+
+BMW:{
+
+name:"BMW",
+logo:"https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg",
+desc:"German luxury performance automobile manufacturer.",
+year:"1916",
+founder:"Karl Rapp",
+ceo:"Oliver Zipse",
+hq:"Munich, Germany"
+
+},
+
+
+
+
+Mercedes:{
+
+name:"MERCEDES BENZ",
+logo:"https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg",
+desc:"Luxury German automobile manufacturer.",
+year:"1926",
+founder:"Karl Benz",
+ceo:"Ola Källenius",
+hq:"Stuttgart, Germany"
+
+},
+
+
+
+
+Audi:{
+
+name:"AUDI",
+logo:"https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg",
+desc:"Premium German automobile brand.",
+year:"1909",
+founder:"August Horch",
+ceo:"Gernot Döllner",
+hq:"Ingolstadt, Germany"
+
+},
+
+
+
+
+
+Toyota:{
+
+name:"TOYOTA",
+logo:"https://upload.wikimedia.org/wikipedia/commons/e/ee/Toyota_logo.svg",
+desc:"World famous Japanese automobile manufacturer.",
+year:"1937",
+founder:"Kiichiro Toyoda",
+ceo:"Koji Sato",
+hq:"Toyota City, Japan"
+
+},
+
+
+
+
+
+Tata:{
+
+name:"TATA MOTORS",
+logo:"https://upload.wikimedia.org/wikipedia/commons/8/8e/Tata_logo.svg",
+desc:"India's largest automobile manufacturer.",
+year:"1945",
+founder:"J.R.D Tata",
+ceo:"Shailesh Chandra",
+hq:"Mumbai, India"
+
+},
+
+
+
+
+
+Hyundai:{
+
+name:"HYUNDAI",
+logo:"https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg",
+desc:"Global automobile manufacturer.",
+year:"1967",
+founder:"Chung Ju-yung",
+ceo:"Jae Hoon Chang",
+hq:"Seoul, Korea"
+
+}
+
+
+
+};
+
+
+
+
+
+
+let info=brands[brand];
+
+
+
+document.getElementById("logo").src=info.logo;
+
+document.getElementById("name").innerHTML=info.name;
+
+document.getElementById("desc").innerHTML=info.desc;
+
+document.getElementById("year").innerHTML=info.year;
+
+document.getElementById("founder").innerHTML=info.founder;
+
+document.getElementById("ceo").innerHTML=info.ceo;
+
+document.getElementById("hq").innerHTML=info.hq;
+
+
+
+
+
+
+
+
+
+fetch("php/getCars.php?brand="+brand)
+
+
+.then(res=>res.json())
+
+
+.then(data=>{
+
+
+let box=document.getElementById("cars");
+
+
+box.innerHTML="";
+
+
+
+document.getElementById("title").innerHTML=
+"All "+brand+" Models";
+
+
+
+
+
+data.forEach(car=>{
+
+
+box.innerHTML +=`
+
+
+<div class="car-card">
+
+
+<img src="${car.image}">
+
+
+<h3>${car.model}</h3>
+
+
+<p>₹${(car.price/100000).toFixed(2)} Lakh</p>
+
+
+
+<a href="car-details.html?id=${car.id}">
+
+View Details
+
+</a>
+
+
+</div>
+
+
+`;
+
+
+
+});
+
+
+
+});
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

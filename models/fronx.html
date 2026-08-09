@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Fronx | DriveSphere</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/model.css">
+
+    <style>
+        body {
+            background-color: #0f1115;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #161920;
+            border-bottom: 1px solid #2a2e39;
+        }
+
+        img {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+            object-fit: cover;
+        }
+
+        /* Clean Image Container Box Fix */
+        .model-img-container {
+            width: 100%;
+            height: 350px;
+            background-color: #ffffff !important;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #2a2e39;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            padding: 15px;
+        }
+
+        .model-img-container img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .card {
+            background-color: #181b22 !important;
+            border: 1px solid #2a2e39 !important;
+            color: #ffffff !important;
+            border-radius: 12px !important;
+        }
+
+        .list-group-item {
+            background-color: #181b22 !important;
+            color: #e0e0e0 !important;
+            border-color: #2a2e39 !important;
+        }
+
+        .green { color: #00e676; }
+        .gold { color: #ffc107; }
+
+        .price-box {
+            background-color: #1f232d;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            background-color: #222632 !important;
+            border: 1px solid #343a46 !important;
+            color: #ffffff !important;
+        }
+
+        footer {
+            background-color: #0b0c0e;
+            padding: 40px 0;
+            border-top: 1px solid #2a2e39;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="../index.html">🚗 DriveSphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../suzuki.html">Suzuki Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specs">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#emi">EMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="model-img-container">
+                    <img src="https://img.autocarindia.com/mmv_images/colors/20250620010724_Maruti_Suzuki_Fronx_Arctic_White[1].jpg?w=640&q=75" alt="Maruti Fronx">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">Maruti <span class="green">Fronx</span></h1>
+                <p class="lead mt-3">
+                    Shape-shifting SUV Coupe with NEXWave grille, 1.0L Turbo Boosterjet engine, 360-degree camera, and Head-Up Display (HUD).
+                </p>
+                <div class="price-box">
+                    <p class="mb-1 text-muted">Starting Price</p>
+                    <h2 class="text-warning mb-0">₹7.51 Lakh*</h2>
+                    <small class="text-secondary">*Ex-Showroom Price</small>
+                </div>
+                <div class="mt-4">
+                    <a href="#specs" class="btn btn-warning me-3 fw-bold">View Specifications</a>
+                    <a href="../suzuki.html" class="btn btn-outline-light">Back To Suzuki Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO CARD -->
+    <section class="container py-3">
+        <div class="card p-4 text-center">
+            <h3 class="green mb-2">⚡ The Shape of New SUV Performance</h3>
+            <p class="mb-0 text-secondary">100 PS Turbo Boosterjet Engine, 6-Speed AT with Paddle Shifters, and NEXA 3-Cube LED DRLs.</p>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE HIGHLIGHTS -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Performance Highlights</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🚀</h1>
+                    <h4>Engine</h4>
+                    <p class="text-secondary mb-0">1.0L Turbo Boosterjet / 1.2L K-Series</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">⚡</h1>
+                    <h4>Power</h4>
+                    <p class="text-secondary mb-0">100 PS / 147.6 Nm</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🛞</h1>
+                    <h4>Transmission</h4>
+                    <p class="text-secondary mb-0">5MT / 6AT / 5AGS</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 p-4">
+                    <h1 class="mb-3">⭐</h1>
+                    <h4>Ground Clearance</h4>
+                    <p class="text-secondary mb-0">190 mm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SPECIFICATIONS -->
+    <section id="specs" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Technical Specifications</h2>
+        <div class="card p-4">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <tbody>
+                        <tr><th>Engine Options</th><td>1.0L Turbo Boosterjet Petrol / 1.2L K-Series DualJet Petrol & CNG</td></tr>
+                        <tr><th>Engine Capacity</th><td>998 cc (Turbo) / 1197 cc (1.2L)</td></tr>
+                        <tr><th>Maximum Power</th><td>100 PS @ 5500 rpm (Turbo) / 90 PS @ 6000 rpm (1.2L)</td></tr>
+                        <tr><th>Maximum Torque</th><td>147.6 Nm @ 2000-4500 rpm (Turbo) / 113 Nm (1.2L)</td></tr>
+                        <tr><th>Transmission</th><td>5-Speed Manual / 6-Speed AT / 5-Speed AGS</td></tr>
+                        <tr><th>Fuel Efficiency</th><td>21.5 km/l (Turbo) / 22.89 km/l (1.2L) / 28.51 km/kg (CNG)</td></tr>
+                        <tr><th>Seating Capacity</th><td>5 Persons</td></tr>
+                        <tr><th>Boot Space</th><td>308 Litres</td></tr>
+                        <tr><th>Ground Clearance</th><td>190 mm</td></tr>
+                        <tr><th>Infotainment</th><td>9-inch SmartPlay Pro+ Touchscreen with Arkamys Audio</td></tr>
+                        <tr><th>Safety Features</th><td>6 Airbags, ESP, Hill Hold Assist, 360 Camera, ABS with EBD</td></tr>
+                        <tr><th>Warranty</th><td>2 Years / 40,000 KM</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY FEATURES -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Safety Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🛡️ 6 Airbags (Front, Side & Curtain)</li>
+                        <li class="list-group-item">🚘 Electronic Stability Program (ESP) & Hill Hold Assist</li>
+                        <li class="list-group-item">📷 360-Degree Surround View Camera</li>
+                        <li class="list-group-item">🔒 Auto-Dimming IRVM & Reverse Parking Sensors</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">⚠️ High-Speed Warning Alert & Seatbelt Reminders</li>
+                        <li class="list-group-item">⚓ ISOFIX Child Seat Anchor Mounts</li>
+                        <li class="list-group-item">🛞 ABS with Electronic Brakeforce Distribution (EBD)</li>
+                        <li class="list-group-item">💡 Automatic LED Multi-Reflector Headlamps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VARIANTS -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Variants</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>Sigma</h4>
+                    <p class="text-secondary">Base Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ Dual Airbags & ESP</li>
+                        <li>✔ Automatic Climate Control</li>
+                        <li>✔ Reverse Parking Sensors</li>
+                        <li>✔ All Power Windows</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>Delta / Delta+</h4>
+                    <p class="text-secondary">Mid Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 7-inch SmartPlay Touchscreen</li>
+                        <li>✔ LED Headlamps & DRLs</li>
+                        <li>✔ Steering Audio Controls</li>
+                        <li>✔ Electric ORVMs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>Zeta</h4>
+                    <p class="text-secondary">Upper Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 1.0L Turbo Engine Option</li>
+                        <li>✔ 6 Airbags Standard</li>
+                        <li>✔ Wireless Charger</li>
+                        <li>✔ Engine Push Start/Stop</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>Alpha</h4>
+                    <p class="text-secondary">Top Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 360-Degree Camera</li>
+                        <li>✔ Head-Up Display (HUD)</li>
+                        <li>✔ 9-inch SmartPlay Pro+ Screen</li>
+                        <li>✔ Precision Cut Alloys</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM FEATURES -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Premium Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🖥️ 9-inch SmartPlay Pro+ HD Touchscreen</li>
+                        <li class="list-group-item">🌌 Head-Up Display (HUD) Unit</li>
+                        <li class="list-group-item">📷 360-Degree Surround View Camera</li>
+                        <li class="list-group-item">📱 Wireless Smartphone Charger</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🌐 Suzuki Connect with 40+ Connected Features</li>
+                        <li class="list-group-item">⚙ 6-Speed Automatic Transmission with Paddle Shifters</li>
+                        <li class="list-group-item">❄ Rear AC Vents with Fast USB Chargers</li>
+                        <li class="list-group-item">💡 NEXA 3-Cube LED DRLs & Connected LED Tail Lamp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLORS -->
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Colors</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-2 col-6"><div class="card p-3">Nexa Blue</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Arctic White</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Splendid Silver</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Grandeur Grey</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Opulent Red</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Earthen Brown</div></div>
+        </div>
+    </section>
+
+    <!-- PROS & CONS -->
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h3 class="text-success mb-3">✔ Pros</h3>
+                    <ul class="mb-0">
+                        <li>Stunning SUV Coupe Exterior Design & Connected Rear Lights</li>
+                        <li>Punchy 100 PS Turbo Boosterjet Petrol Engine</li>
+                        <li>High Ground Clearance (190mm) & Ride Quality</li>
+                        <li>Loaded Features (HUD, 360 Camera, Wireless Charger)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h3 class="text-danger mb-3">✖ Cons</h3>
+                    <ul class="mb-0">
+                        <li>Sloping Coupe Roof Reduces Rear Seat Headroom For Tall Passengers</li>
+                        <li>No Sunroof Option Provided</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMI CALCULATOR -->
+    <section id="emi" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">EMI Calculator</h2>
+        <div class="card p-4 mx-auto" style="max-width: 650px;">
+            <h4 class="text-center mb-4 green fw-bold">Calculate Your Maruti Fronx EMI</h4>
+            <div class="mb-3">
+                <label class="form-label">Vehicle Price (₹)</label>
+                <input type="number" id="price" class="form-control" value="751000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Down Payment (₹)</label>
+                <input type="number" id="down" class="form-control" value="100000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Loan Period (Years)</label>
+                <input type="number" id="years" class="form-control" value="5">
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Interest Rate (%)</label>
+                <input type="number" id="interest" class="form-control" value="8.5">
+            </div>
+            <button class="btn btn-warning w-100 fw-bold py-2" onclick="calculateEMI()">Calculate EMI</button>
+            <h3 class="text-center mt-4 green fw-bold" id="emiResult">₹0 / Month</h3>
+        </div>
+    </section>
+
+    <!-- ACTION BUTTONS -->
+    <section class="container text-center py-5">
+        <a href="#" class="btn btn-success me-3 mb-3 px-4 py-2 fw-bold">📅 Book Test Drive</a>
+        <a href="https://marutistoragenew.blob.core.windows.net/msilpwsbrochures/Fronx_Brochure.pdf" target="_blank" download="Maruti_Fronx_Brochure.pdf" class="btn btn-primary me-3 mb-3 px-4 py-2 fw-bold">📄 Download Brochure</a>
+        <a href="../suzuki.html" class="btn btn-outline-light mb-3 px-4 py-2">⬅ Back To Suzuki Cars</a>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <h3>🚗 DriveSphere</h3>
+            <p class="text-secondary">Premium Automotive Experience</p>
+            <hr class="border-secondary my-4">
+            <p class="mb-0 text-muted">© 2026 DriveSphere. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateEMI() {
+            let price = Number(document.getElementById("price").value);
+            let down = Number(document.getElementById("down").value);
+            let years = Number(document.getElementById("years").value);
+            let interest = Number(document.getElementById("interest").value);
+
+            let loan = price - down;
+            let months = years * 12;
+            let monthlyRate = interest / 12 / 100;
+
+            if (loan <= 0 || isNaN(loan)) {
+                document.getElementById("emiResult").innerHTML = "Enter Valid Amount";
+                return;
+            }
+
+            let emi = (loan * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+            document.getElementById("emiResult").innerHTML = "₹" + emi.toFixed(0) + " / Month";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia Cars | DriveSphere</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0b0f17 !important;
+            color: #f8fafc !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Navbar */
+        .navbar {
+            background: rgba(15, 23, 42, 0.85) !important;
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            margin: 20px auto;
+            max-width: 92%;
+        }
+
+        .brand-heading {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Live Search Bar */
+        .search-box-container {
+            max-width: 550px;
+            margin: 0 auto 40px auto;
+            position: relative;
+        }
+
+        .search-input {
+            background: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            color: #111 !important;
+            border-radius: 16px !important;
+            padding: 14px 20px 14px 48px !important;
+            font-size: 1rem !important;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        /* Premium Studio Card Styling */
+        .car-card {
+            background: #121826 !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            transition: all 0.35s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .car-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.5) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        /* Clean Studio Dark Container - No White Borders & Contain Fit */
+        .card-img-container {
+            width: 100%;
+            height: 220px;
+            background-color: #121826 !important;
+            overflow: hidden !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px !important;
+        }
+
+        .card-img-container img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            display: block !important;
+            transition: transform 0.5s ease;
+        }
+
+        .car-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .card-body {
+            padding: 1.5rem !important;
+            text-align: center !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .car-title {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin-bottom: 0.25rem !important;
+        }
+
+        .car-category {
+            font-size: 0.88rem !important;
+            color: #94a3b8 !important;
+            font-weight: 500 !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+            color: #0b0f17 !important;
+            font-weight: 700 !important;
+            border: none !important;
+            border-radius: 12px !important;
+            padding: 12px !important;
+            text-transform: uppercase;
+            font-size: 0.85rem !important;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+            color: #0b0f17 !important;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 50px 20px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="../index.html">🚗 DriveSphere</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-light opacity-75" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning fw-bold active" href="kia.html">Kia Cars</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-4 text-center">
+        <h1 class="brand-heading mb-3">Kia Collection</h1>
+        <p class="text-secondary mb-4" style="font-size: 1.05rem;">Explore stylish, high-tech SUVs and electric vehicles.</p>
+
+        <div class="search-box-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="carSearchInput" class="form-control search-input" placeholder="Search Kia model..." onkeyup="searchCars()">
+        </div>
+    </section>
+
+    <!-- CARS GRID -->
+    <section class="container pb-5">
+        <div class="row g-4" id="carGrid">
+
+            <!-- 1. Kia Seltos -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="kia seltos mid-size suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://wallpaperaccess.com/full/10827215.jpg" alt="Kia Seltos">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Kia Seltos</h3>
+                            <p class="car-category">Mid-Size SUV</p>
+                        </div>
+                        <a href="models/seltos.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Kia Sonet -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="kia sonet compact suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://ts2.mm.bing.net/th?id=OIP.VZUZ-CUKHRRtxT8-Qq5pLwHaEK&pid=15.1&w=518&h=291&c=7&rs=1" alt="Kia Sonet">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Kia Sonet</h3>
+                            <p class="car-category">Compact SUV</p>
+                        </div>
+                        <a href="models/sonet.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Kia Carens -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="kia carens rv mpv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://img.autocarindia.com/mmv_images/colors/20250523110610_Kia_Carens_Clavis_Sparkling_Silver[1].png?w=640&q=75" alt="Kia Carens">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Kia Carens</h3>
+                            <p class="car-category">Recreational Vehicle (RV)</p>
+                        </div>
+                        <a href="models/carens.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Kia EV6 -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="kia ev6 electric crossover">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://www.hdcarwallpapers.com/download/kia_ev6_gt_2023_5k-3840x2160.jpg" alt="Kia EV6">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Kia EV6</h3>
+                            <p class="car-category">Electric Crossover</p>
+                        </div>
+                        <a href="models/ev6.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Kia EV9 -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="kia ev9 flagship electric suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://imgcdn.zigwheels.co.th/large/gallery/color/13/3606/kia-ev9-color-160990.jpg" alt="Kia EV9">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Kia EV9</h3>
+                            <p class="car-category">Flagship Electric SUV</p>
+                        </div>
+                        <a href="models/ev9.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Kia Carnival -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="kia carnival luxury mpv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://ts2.mm.bing.net/th?id=OIP.hpWrzmDgVTCSp1GvamahiwHaEK&pid=15.1&w=518&h=291&c=7&rs=1" alt="Kia Carnival">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Kia Carnival</h3>
+                            <p class="car-category">Luxury MPV</p>
+                        </div>
+                        <a href="models/carnival.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="noResults" class="no-results">
+            <h4>No models found</h4>
+        </div>
+    </section>
+
+    <footer class="mt-5 text-center py-4 border-top border-secondary opacity-50">
+        <p class="mb-0">© 2026 DriveSphere. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function searchCars() {
+            let input = document.getElementById("carSearchInput").value.toLowerCase();
+            let items = document.getElementsByClassName("car-item");
+            let visibleCount = 0;
+            for (let i = 0; i < items.length; i++) {
+                let name = items[i].getAttribute("data-name");
+                if (name.includes(input)) {
+                    items[i].style.display = "block";
+                    visibleCount++;
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+            document.getElementById("noResults").style.display = (visibleCount === 0) ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

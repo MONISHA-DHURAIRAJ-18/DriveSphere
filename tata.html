@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Cars | DriveSphere</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0b0f17 !important;
+            color: #f8fafc !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Navbar */
+        .navbar {
+            background: rgba(15, 23, 42, 0.85) !important;
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            margin: 20px auto;
+            max-width: 92%;
+        }
+
+        .brand-heading {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Live Search Bar */
+        .search-box-container {
+            max-width: 550px;
+            margin: 0 auto 40px auto;
+            position: relative;
+        }
+
+        .search-input {
+            background: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            color: #111 !important;
+            border-radius: 16px !important;
+            padding: 14px 20px 14px 48px !important;
+            font-size: 1rem !important;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        /* Premium Studio Card Styling */
+        .car-card {
+            background: #121826 !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            transition: all 0.35s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .car-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.5) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        /* Clean Studio Light Container */
+        .card-img-container {
+            width: 100%;
+            height: 220px;
+            background-color: #121826 !important; /* White background-ku badhila dark card background-ah podunga */
+            overflow: hidden !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0px !important; /* Padding-ah remove pannidunga */
+        }
+
+        .card-img-container img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important; /* 'contain'-ah 'cover' nu maathunga */
+            display: block !important;
+            transition: transform 0.5s ease;
+        }
+
+        .car-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .card-body {
+            padding: 1.5rem !important;
+            text-align: center !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .car-title {
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin-bottom: 0.25rem !important;
+        }
+
+        .car-category {
+            font-size: 0.88rem !important;
+            color: #94a3b8 !important;
+            font-weight: 500 !important;
+            margin-bottom: 1.25rem !important;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+            color: #0b0f17 !important;
+            font-weight: 700 !important;
+            border: none !important;
+            border-radius: 12px !important;
+            padding: 12px !important;
+            text-transform: uppercase;
+            font-size: 0.85rem !important;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+            color: #0b0f17 !important;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 50px 20px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="index.html">🚗 DriveSphere</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-light opacity-75" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning fw-bold active" href="tata.html">Tata Cars</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-4 text-center">
+        <h1 class="brand-heading mb-3">Tata Collection</h1>
+        <p class="text-secondary mb-4" style="font-size: 1.05rem;">Explore India's safest electric and ICE vehicles.</p>
+
+        <div class="search-box-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="carSearchInput" class="form-control search-input" placeholder="Search car model..." onkeyup="searchCars()">
+        </div>
+    </section>
+
+    <!-- CARS GRID USING PROVIDED IMAGE LINKS -->
+    <section class="container pb-5">
+        <div class="row g-4" id="carGrid">
+
+            <!-- 1. Nexon -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata nexon compact suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://th.bing.com/th/id/OIP.FuhIXfvzAkkRqLweJRQbfQHaES?r=0&pid=CanonicalCanvas&w=518&h=300&c=7&rs=1" alt="Tata Nexon">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Nexon</h3>
+                            <p class="car-category">Compact SUV</p>
+                        </div>
+                        <a href="models/nexon.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Nexon EV -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata nexon ev electric suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://auto.hindustantimes.com/cms-images/tata_nexon/images/exterior_tata-nexon_front-left-view_614x400.jpg" class="img-fluid rounded w-100" alt="Tata Nexon EV"">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Nexon EV</h3>
+                            <p class="car-category">Electric SUV</p>
+                        </div>
+                        <a href="models/nexon-ev.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Punch -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata punch micro suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.IJTHMNECx1zcNs8DVeeJHAHaEK?r=0&w=724&h=407&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tata Punch">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Punch</h3>
+                            <p class="car-category">Micro SUV</p>
+                        </div>
+                        <a href="models/punch.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Punch EV -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata punch ev electric micro suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://www.airsuspension.in/jap/media/gallery/Tata-Punch-EV.jpg" alt="Tata Punch EV">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Punch EV</h3>
+                            <p class="car-category">Electric Micro SUV</p>
+                        </div>
+                        <a href="models/punch-ev.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Altroz -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata altroz premium hatchback">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://media.zigcdn.com/media/model/2025/Jul/model-extimg-2073188550_930x620.jpg" alt="Tata Altroz">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Altroz</h3>
+                            <p class="car-category">Premium Hatchback</p>
+                        </div>
+                        <a href="models/altroz.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Tiago -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata tiago hatchback">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://cdni.autocarindia.com/ExtraImages/20210129073654_Tata_Tiago_Limited_Edition.jpg" alt="Tata Tiago">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Tiago</h3>
+                            <p class="car-category">Hatchback</p>
+                        </div>
+                        <a href="models/tiago.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Tiago EV -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata tiago ev electric hatchback">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Tiago-EV/6279/1756119438947/front-left-side-47.jpg" alt="Tata Tiago EV">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Tiago EV</h3>
+                            <p class="car-category">Electric Hatchback</p>
+                        </div>
+                        <a href="models/tiago-ev.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Tigor -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata tigor compact sedan">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://cdn.cars24.com/prod/new-car-cms/Tata/Tigor/2025/02/07/3be79663-908a-436e-8069-d70859e24511-3.png" alt="Tata Tigor">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Tigor</h3>
+                            <p class="car-category">Compact Sedan</p>
+                        </div>
+                        <a href="models/tigor.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Tigor EV -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata tigor ev electric sedan">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://th.bing.com/th/id/OIP.RrzLKf1UqazfLpI0U-rXxQHaEK?r=0&pid=CanonicalCanvas&w=518&h=291&c=7&rs=1" alt="Tata Tigor EV">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Tigor EV</h3>
+                            <p class="car-category">Electric Sedan</p>
+                        </div>
+                        <a href="models/tigor-ev.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Curvv -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata curvv coupe suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://i.ytimg.com/vi/SxgIqP7QSYQ/maxresdefault.jpg" alt="Tata Curvv">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Curvv</h3>
+                            <p class="car-category">Coupe SUV</p>
+                        </div>
+                        <a href="models/curvv.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Curvv EV -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata curvv ev electric coupe suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://vvctata.com/wp-content/uploads/2025/06/curvv-ev.png" alt="Tata Curvv EV">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Curvv EV</h3>
+                            <p class="car-category">Electric Coupe SUV</p>
+                        </div>
+                        <a href="models/curvv-ev.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Harrier -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata harrier mid-size suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://wallpaperaccess.com/full/8522579.jpg" alt="Tata Harrier">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Harrier</h3>
+                            <p class="car-category">Mid-Size SUV</p>
+                        </div>
+                        <a href="models/harrier.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. Safari -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata safari flagship suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://imgd-ct.aeplcdn.com/1056x660/n/wyr60hb_1863592.jpg?q=80" alt="Tata Safari">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Safari</h3>
+                            <p class="car-category">Flagship SUV</p>
+                        </div>
+                        <a href="models/safari.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. Sierra -->
+            <div class="col-lg-4 col-md-6 car-item" data-name="tata sierra concept suv">
+                <div class="car-card">
+                    <div class="card-img-container">
+                        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Sierra/12271/1765181428462/front-left-side-47.jpg" alt="Tata Sierra">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="car-title">Tata Sierra</h3>
+                            <p class="car-category">Concept SUV</p>
+                        </div>
+                        <a href="models/sierra.html" class="btn btn-gold">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="noResults" class="no-results">
+            <h4>No models found</h4>
+        </div>
+    </section>
+
+    <footer class="mt-5 text-center py-4 border-top border-secondary opacity-50">
+        <p class="mb-0">© 2026 DriveSphere. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function searchCars() {
+            let input = document.getElementById("carSearchInput").value.toLowerCase();
+            let items = document.getElementsByClassName("car-item");
+            let visibleCount = 0;
+            for (let i = 0; i < items.length; i++) {
+                let name = items[i].getAttribute("data-name");
+                if (name.includes(input)) {
+                    items[i].style.display = "block";
+                    visibleCount++;
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+            document.getElementById("noResults").style.display = (visibleCount === 0) ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

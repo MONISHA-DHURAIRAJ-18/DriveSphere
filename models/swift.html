@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Suzuki Swift | DriveSphere</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/model.css">
+
+    <style>
+        body {
+            background-color: #0f1115;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #161920;
+            border-bottom: 1px solid #2a2e39;
+        }
+
+        img {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+            object-fit: cover;
+        }
+
+        .card {
+            background-color: #181b22 !important;
+            border: 1px solid #2a2e39 !important;
+            color: #ffffff !important;
+            border-radius: 12px !important;
+        }
+
+        .list-group-item {
+            background-color: #181b22 !important;
+            color: #e0e0e0 !important;
+            border-color: #2a2e39 !important;
+        }
+
+        .green { color: #00e676; }
+        .gold { color: #ffc107; }
+
+        .price-box {
+            background-color: #1f232d;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            background-color: #222632 !important;
+            border: 1px solid #343a46 !important;
+            color: #ffffff !important;
+        }
+
+        footer {
+            background-color: #0b0c0e;
+            padding: 40px 0;
+            border-top: 1px solid #2a2e39;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="../index.html">🚗 DriveSphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../suzuki.html">Suzuki Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specs">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#emi">EMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://th.bing.com/th/id/OIP.saHJGC3yiV7FpKpo8ZHtswHaEc?r=0&pid=CanonicalCanvas&w=518&h=311&c=7&rs=1">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">Maruti <span class="green">Swift</span></h1>
+                <p class="lead mt-3">
+                    All-new 4th Generation iconic hatchback featuring Z-Series 1.2L 3-cylinder engine, 9-inch SmartPlay Pro+ touchscreen, wireless charging, and 6 Airbags standard.
+                </p>
+                <div class="price-box">
+                    <p class="mb-1 text-muted">Starting Price</p>
+                    <h2 class="text-warning mb-0">₹6.49 Lakh*</h2>
+                    <small class="text-secondary">*Ex-Showroom Price</small>
+                </div>
+                <div class="mt-4">
+                    <a href="#specs" class="btn btn-warning me-3 fw-bold">View Specifications</a>
+                    <a href="../suzuki.html" class="btn btn-outline-light">Back To Suzuki Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-3">
+        <div class="card p-4 text-center">
+            <h3 class="green mb-2">🔥 Epic New Z-Series Efficiency</h3>
+            <p class="mb-0 text-secondary">25.75 km/l class-leading mileage, 6 Airbags standard across all trims, and ESP with Hill Hold Assist.</p>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Performance Highlights</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🚀</h1>
+                    <h4>Engine</h4>
+                    <p class="text-secondary mb-0">1.2L Z-Series Petrol</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">⚡</h1>
+                    <h4>Mileage</h4>
+                    <p class="text-secondary mb-0">25.75 km/l</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-4 h-100">
+                    <h1 class="mb-3">🛞</h1>
+                    <h4>Transmission</h4>
+                    <p class="text-secondary mb-0">5-Speed MT / 5-Speed AMT</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 p-4">
+                    <h1 class="mb-3">⭐</h1>
+                    <h4>Safety</h4>
+                    <p class="text-secondary mb-0">6 Airbags Standard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Technical Specifications</h2>
+        <div class="card p-4">
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <tbody>
+                        <tr><th>Engine Options</th><td>1.2L Z12E 3-Cylinder Petrol Engine</td></tr>
+                        <tr><th>Engine Capacity</th><td>1197 cc</td></tr>
+                        <tr><th>Maximum Power</th><td>82 PS @ 5700 rpm</td></tr>
+                        <tr><th>Maximum Torque</th><td>112 Nm @ 4300 rpm</td></tr>
+                        <tr><th>Transmission</th><td>5-Speed Manual / 5-Speed Automated Manual Transmission (AMT)</td></tr>
+                        <tr><th>Fuel Efficiency</th><td>24.8 km/l (MT) / 25.75 km/l (AMT)</td></tr>
+                        <tr><th>Seating Capacity</th><td>5 Persons</td></tr>
+                        <tr><th>Boot Space</th><td>265 Litres</td></tr>
+                        <tr><th>Wheelbase</th><td>2450 mm</td></tr>
+                        <tr><th>Infotainment</th><td>9-inch SmartPlay Pro+ Touchscreen with Wireless Connectivity</td></tr>
+                        <tr><th>Safety Features</th><td>6 Airbags Standard, ESP, Hill Hold Assist, Reverse Camera</td></tr>
+                        <tr><th>Warranty</th><td>2 Years / 40,000 KM</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Safety Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🛡️ 6 Airbags Standard Across All Variants</li>
+                        <li class="list-group-item">🚘 Electronic Stability Program (ESP)</li>
+                        <li class="list-group-item">🔒 Hill Hold Assist System</li>
+                        <li class="list-group-item">📷 Reverse Parking Camera with Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🅿️ Rear Parking Sensors</li>
+                        <li class="list-group-item">⚓ ISOFIX Child Anchor Seats</li>
+                        <li class="list-group-item">🛞 ABS with Electronic Brakeforce Distribution (EBD)</li>
+                        <li class="list-group-item">🔑 Keyless Entry & Engine Start-Stop Button</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Variants</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>LXi</h4>
+                    <p class="text-secondary">Base Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 6 Airbags Standard</li>
+                        <li>✔ ESP & Hill Hold</li>
+                        <li>✔ Front Power Windows</li>
+                        <li>✔ Halogen Headlamps</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>VXi / VXi (O)</h4>
+                    <p class="text-secondary">Mid Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 7-inch SmartPlay Touchscreen</li>
+                        <li>✔ Steering Audio Controls</li>
+                        <li>✔ Rear AC Vents</li>
+                        <li>✔ Electrically Adjustable ORVMs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>ZXi</h4>
+                    <p class="text-secondary">Upper Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ LED Projector Headlamps & DRLs</li>
+                        <li>✔ Wireless Smartphone Charger</li>
+                        <li>✔ Auto Climate Control</li>
+                        <li>✔ 15-inch Alloy Wheels</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card p-4 h-100 text-center shadow">
+                    <h4>ZXi+</h4>
+                    <p class="text-secondary">Top Variant</p>
+                    <ul class="list-unstyled text-start mt-3">
+                        <li>✔ 9-inch SmartPlay Pro+ Screen</li>
+                        <li>✔ Arkamys Surround Sound</li>
+                        <li>✔ Cruise Control System</li>
+                        <li>✔ Dual-Tone Precision Cut Alloys</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Premium Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🖥️ 9-inch SmartPlay Pro+ Touchscreen Infotainment</li>
+                        <li class="list-group-item">🎵 Arkamys Premium Surround Audio System</li>
+                        <li class="list-group-item">📱 Wireless Charging Pad</li>
+                        <li class="list-group-item">❄ Rear AC Vents for Quick Cabin Cooling</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🧭 Cruise Control System</li>
+                        <li class="list-group-item">🌐 Suzuki Connect with 40+ Connected Car Features</li>
+                        <li class="list-group-item">🔑 Engine Push Start Button with Smart Key</li>
+                        <li class="list-group-item">💡 LED Projector Headlamps with DRLs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">Available Colors</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-2 col-6"><div class="card p-3">Luster Blue</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Novel Orange</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Sizzling Red</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Splendid Silver</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Luster Blue Dual Tone</div></div>
+            <div class="col-md-2 col-6"><div class="card p-3">Pearl Arctic White</div></div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h3 class="text-success mb-3">✔ Pros</h3>
+                    <ul class="mb-0">
+                        <li>Class-Leading Mileage (25.75 km/l ARAI Certified)</li>
+                        <li>Standard 6 Airbags Across All Trim Levels</li>
+                        <li>Loaded Features (9-inch Screen, Wireless Charger, Rear AC Vents)</li>
+                        <li>High Resale Value & Vast Suzuki Service Network</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h3 class="text-danger mb-3">✖ Cons</h3>
+                    <ul class="mb-0">
+                        <li>3-Cylinder Engine Lacks the High-RPM Punch of Previous 4-Cylinder</li>
+                        <li>AMT Automatic Gearbox Lacks Fluidity Compared to CVT Competitors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emi" class="container py-5">
+        <h2 class="gold text-center mb-5 fw-bold">EMI Calculator</h2>
+        <div class="card p-4 mx-auto" style="max-width: 650px;">
+            <h4 class="text-center mb-4 green fw-bold">Calculate Your Maruti Swift EMI</h4>
+            <div class="mb-3">
+                <label class="form-label">Vehicle Price (₹)</label>
+                <input type="number" id="price" class="form-control" value="649000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Down Payment (₹)</label>
+                <input type="number" id="down" class="form-control" value="100000">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Loan Period (Years)</label>
+                <input type="number" id="years" class="form-control" value="5">
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Interest Rate (%)</label>
+                <input type="number" id="interest" class="form-control" value="8.5">
+            </div>
+            <button class="btn btn-warning w-100 fw-bold py-2" onclick="calculateEMI()">Calculate EMI</button>
+            <h3 class="text-center mt-4 green fw-bold" id="emiResult">₹0 / Month</h3>
+        </div>
+    </section>
+
+    <section class="container text-center py-5">
+        <a href="#" class="btn btn-success me-3 mb-3 px-4 py-2 fw-bold">📅 Book Test Drive</a>
+        <a href="https://marutistoragenew.blob.core.windows.net/msilpwsbrochures/Swift_Brochure.pdf" target="_blank" download="Maruti_Swift_Brochure.pdf" class="btn btn-primary me-3 mb-3 px-4 py-2 fw-bold">📄 Download Brochure</a>
+        <a href="../suzuki.html" class="btn btn-outline-light mb-3 px-4 py-2">⬅ Back To Suzuki Cars</a>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <h3>🚗 DriveSphere</h3>
+            <p class="text-secondary">Premium Automotive Experience</p>
+            <hr class="border-secondary my-4">
+            <p class="mb-0 text-muted">© 2026 DriveSphere. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateEMI() {
+            let price = Number(document.getElementById("price").value);
+            let down = Number(document.getElementById("down").value);
+            let years = Number(document.getElementById("years").value);
+            let interest = Number(document.getElementById("interest").value);
+
+            let loan = price - down;
+            let months = years * 12;
+            let monthlyRate = interest / 12 / 100;
+
+            if (loan <= 0 || isNaN(loan)) {
+                document.getElementById("emiResult").innerHTML = "Enter Valid Amount";
+                return;
+            }
+
+            let emi = (loan * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+            document.getElementById("emiResult").innerHTML = "₹" + emi.toFixed(0) + " / Month";
+        }
+    </script>
+</body>
+
+</html>
